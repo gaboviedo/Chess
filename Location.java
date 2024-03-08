@@ -4,6 +4,11 @@ public class Location {
     char col;
     int row;
 
+    //constructor
+    Location(char col, int row) {
+	    this.col = col;
+	    this.row = row;
+    }
 
     int getRow(){
         return this.row;

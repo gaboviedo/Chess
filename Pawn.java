@@ -2,7 +2,17 @@ package org.example;
 
 public class Pawn extends Piece{
 
+    //members
+    protected enPassantEnabled = false; //can be killed by En Passant
 
+    //constructor
+    Pawn(Location loc, boolean isBlack) {
+        pieceType = PieceType.Pawn;
+        this.loc = loc;
+        this.isBlack = isBlack;
+    }
+
+    //methods
     /**
      * list of conditions that would make a move not legal:
      *
