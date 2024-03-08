@@ -2,9 +2,10 @@
 
 public class ChessGame {
     private ChessBoard board;
-    private ArrayList<Piece> whitePieces;
+    private ArrayList<Piece> whitePieces;   //TODO: change this to map(UUID, piece)
     private ArrayList<Piece> blackPieces;
-    //private GameState stat;
+    //private deadPieces;
+    //private GameState status;
     private boolean whiteIsChecked = false;
     private boolean blackIsChecked = false;
     private boolean whiteStalemate = false;
@@ -15,9 +16,11 @@ public class ChessGame {
     }
 
     //methods
+    void move(Piece piece, Location targetLoc) {};
     boolean isBlackStalemate() {}
     boolean isWhiteStalemate() {}
     void removePiece(Location loc) {
+        UUID uuid-toBeRemoved;
     }
-    void setPiece(PieceType type, Location loc) {}
+    void setPiece(PieceType type, Location loc, boolean isBlack) {}
 }
