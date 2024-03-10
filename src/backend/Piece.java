@@ -1,6 +1,4 @@
-package org.example;
-
-import java.util.ArrayList;
+package src.chess_game_backend;
 
 public abstract class Piece {
     //members
@@ -27,4 +25,8 @@ public abstract class Piece {
     public PieceType getType() {return pieceType;}
 
 
+    public static class Rook extends Piece{
+
+
+    }
 }

@@ -1,4 +1,4 @@
-package org.example;
+package src.chess_game_backend;
 
 public class Location {
     char col;
