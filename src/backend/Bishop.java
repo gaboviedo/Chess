@@ -23,6 +23,18 @@ public class Bishop extends Piece{
 
     @Override
     Set<Location> listPossibleMoves() {
-        //TODO
+        Set<Location> set = new HashSet<>();
+        Location candidate;
+        char col_candidate;
+        int row_candidate;
+        //diagonal 1
+        set.addAll(listLinearMoves(1, 1));
+        //diagonal 2
+        set.addAll(listLinearMoves(-1, 1));
+        //diagonal 3
+        set.addAll(listLinearMoves(-1, -1));
+        //diagonal 4
+        set.addAll(listLinearMoves(1, -1));
+        return set;
     }
 }

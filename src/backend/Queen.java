@@ -29,6 +29,26 @@ public class Queen extends Piece{
     }
     @Override
     Set<Location> listPossibleMoves() {
-        //TODO
+        Set<Location> set = new HashSet<>();
+        Location candidate;
+        char col_candidate;
+        int row_candidate;
+        //going upward
+        set.addAll(listLinearMoves(0, 1));
+        //going downward
+        set.addAll(listLinearMoves(0, -1));
+        //going left
+        set.addAll(listLinearMoves(-1, 0));
+        //going right
+        set.addAll(listLinearMoves(1, 0));
+        //diagonal 1
+        set.addAll(listLinearMoves(1, 1));
+        //diagonal 2
+        set.addAll(listLinearMoves(-1, 1));
+        //diagonal 3
+        set.addAll(listLinearMoves(-1, -1));
+        //diagonal 4
+        set.addAll(listLinearMoves(1, -1));
+        return set;
     }
 }
