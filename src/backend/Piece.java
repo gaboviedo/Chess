@@ -1,4 +1,9 @@
+//Piece.java
 package src.chess_game_backend;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public abstract class Piece {
     //members
@@ -6,7 +11,7 @@ public abstract class Piece {
     protected boolean isBlack;
     protected PieceType pieceType;
     protected Location loc;
-    protected neverMoved = true;
+    protected boolean neverMoved = true;
     protected ChessBoard board; //reference to the board
 
     //constructor
@@ -18,15 +23,9 @@ public abstract class Piece {
         this.isBlack = isBlack;
     }
     //methods
-    public abstract boolean isLegalMove(Location loc){}
-    public abstract Set<Location> listPossibleMoves(){}
+    public abstract boolean isLegalMove(Location loc);
+    public abstract Set<Location> listPossibleMoves();
     //boolean borderCheck(Location loc){}
     public boolean isBlack() {return isBlack;}
     public PieceType getType() {return pieceType;}
-
-
-    public static class Rook extends Piece{
-
-
-    }
 }

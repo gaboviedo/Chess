@@ -1,4 +1,5 @@
-package src.chess_game_backend;//org.example.PieceType.java
+//PieceType.java
+package src.chess_game_backend;
 
 public enum PieceType {
     King,

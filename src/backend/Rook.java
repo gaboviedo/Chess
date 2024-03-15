@@ -1,3 +1,4 @@
+//Rook.java
 package src.chess_game_backend;
 
 import java.util.HashSet;
@@ -5,10 +6,15 @@ import java.util.Set;
 
 public class Rook extends Piece {
 
+    //members
+
+    //constructors
     Rook(Location loc,boolean isBlack ){
         super(PieceType.Pawn, isBlack);
         this.loc = loc;
     }
+
+    //methods
     @Override
     boolean isLegalMove(Location targetLoc){
         if(targetLoc.getCol()== loc.getCol()&&targetLoc.getRow()!=loc.getRow()){//defines vertical movement
@@ -19,6 +25,7 @@ public class Rook extends Piece {
         }
         return false;
     }
+
     @Override
     Set<Location> listPossibleMoves() {
         Set<Location> set = new HashSet<>();

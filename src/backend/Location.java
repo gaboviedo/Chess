@@ -1,3 +1,4 @@
+//Location.java
 package src.chess_game_backend;
 
 public class Location {
