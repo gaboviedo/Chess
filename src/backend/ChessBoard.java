@@ -27,4 +27,17 @@ public class ChessBoard {
             return false;
         }
     }
+
+    public King getKing(boolean isBlack) {
+        if (isBlack) {
+            return blackKing;
+        }
+        return whiteKing;
+    }
+    public ArrayList<Piece> getTeam(boolean isBlack) {
+        if (isBlack) {
+            return blackTeam;
+        }
+        return whiteTeam;
+    }
 }
