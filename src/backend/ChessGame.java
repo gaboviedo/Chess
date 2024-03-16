@@ -15,8 +15,18 @@ public class ChessGame {
 
     //methods
     void move(Piece piece, Location targetLoc) {};
-    boolean isBlackStalemate() {}
-    boolean isWhiteStalemate() {}
+    public boolean isStalemated(boolean isBlack) {
+        ArrayList<Piece> team = board.getTeam(isBlack);
+        for (Piece piece : team)
+        {
+            //piece.updateLegalMoveList();  //recommend to call updateLegalMoveList() before call this, in game loop
+            if (!piece.getLegalMoveList().isEmpty())    //if not empty; aka this piece can move
+            {
+                return false;
+            }
+        }
+        return true;
+    }
     void removePiece(Location loc) {
         UUID uuid-toBeRemoved;
     }
