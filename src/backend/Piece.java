@@ -37,6 +37,15 @@ public abstract class Piece {
     //getters & setters
     public boolean isBlack() {return isBlack;}
     public PieceType getType() {return pieceType;}
+    public Location getLoc() {
+        return loc;
+    }
+    public boolean isNeverMoved() {
+        return neverMoved;
+    }
+    public void setMoved() {
+        neverMoved = false;
+    }
 
     //helper methods
     //col_shift makes horizontal move, row_shift makes vertical move
