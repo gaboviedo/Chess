@@ -1,7 +1,12 @@
 //ChessBoard.java
 
 public class ChessBoard {
+    //members
     private Piece[][] board = new Piece[8][8];    //board[col][row], loc[a-h][1-8]
+    private ArrayList<Piece> whiteTeam;
+    private ArrayList<Piece> blackTeam;
+    private King whiteKing;
+    private King blackKing;
 
     //constructor
 

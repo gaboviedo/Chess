@@ -2,8 +2,6 @@
 
 public class ChessGame {
     private ChessBoard board;
-    private ArrayList<Piece> whitePieces;   //TODO: change this to map(UUID, piece)
-    private ArrayList<Piece> blackPieces;
     //private deadPieces;
     //private GameState status;
     private boolean whiteIsChecked = false;
