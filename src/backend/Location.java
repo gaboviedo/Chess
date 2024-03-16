@@ -13,10 +13,10 @@ public class Location {
     }
 
     //methods
-    int getRow(){
+    public int getRow(){
         return this.row;
     }
-    char getCol(){
+    public char getCol(){
         return this.col;
     }
 
