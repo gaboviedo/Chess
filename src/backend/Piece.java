@@ -30,7 +30,7 @@ public abstract class Piece {
 
     //abstract methods
     public abstract boolean isLegalMove(Location loc);
-    public abstract Set<Location> listPossibleMoves();
+    public abstract Set<Location> listNominalMoves();
 
     //TODO: boolean borderCheck(Location loc){}
 

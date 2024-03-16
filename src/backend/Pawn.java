@@ -42,7 +42,7 @@ public class Pawn extends Piece{
     }
 
     @Override
-    Set<Location> listPossibleMoves() {
+    Set<Location> listNominalMoves() {
         Set<Location> set = new HashSet<>();
         Location candidate;
         Piece sidePiece;

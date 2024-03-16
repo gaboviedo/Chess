@@ -29,7 +29,7 @@ public class King extends Piece{
     }
 
     @Override
-    Set<Location> listPossibleMoves() {
+    Set<Location> listNominalMoves() {
         Set<Location> set=new HashSet<Location>();
         List<Location> posschanges=new ArrayList<Location>();
         // positive diagnol

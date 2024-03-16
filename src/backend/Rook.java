@@ -27,7 +27,7 @@ public class Rook extends Piece {
     }
 
     @Override
-    /*Set<Location> listPossibleMoves() {
+    /*Set<Location> listNominalMoves() {
         Set<Location> set = new HashSet<>();
         Location candidate=new Location(loc.getCol(), loc.getRow());
         for(int i= loc.getCol();i<8;i++) {//checks right
@@ -58,7 +58,7 @@ public class Rook extends Piece {
         return set;
         }
      */
-    Set<Location> listPossibleMoves() {
+    Set<Location> listNominalMoves() {
         Set<Location> set = new HashSet<>();
         Location candidate;
         char col_candidate;
