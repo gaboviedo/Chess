@@ -8,6 +8,9 @@ public class ChessBoard {
     private King whiteKing;
     private King blackKing;
 
+    private Location maskSource;
+    private Location maskGoal;
+
     //constructor
 
     //methods
@@ -15,6 +18,12 @@ public class ChessBoard {
         return at(loc.getCol(), loc.getRow());
     }
     public Piece at(char col, int row) {
+        if (col == maskSource.getCol() && row == maskSource.getRow()) {   //if query match mask source
+            return null;
+        }
+        if (col == maskGoal.getCol() && row == maskGoal.getRow()) {   //if query match mask goal
+            return Piece[mask_source.getCol() - 'a'][mask_source.getRow() - a]; //return source Piece
+        }
         return Piece[col - 'a'][row - 1];
     }
     public boolean isEmptyAt(Location loc) {
@@ -26,6 +35,23 @@ public class ChessBoard {
         } else {
             return false;
         }
+    }
+
+    public void setMaskSource(Location loc) {
+        maskSource = loc;
+    }
+    public void setMaskSource(char col, int row) {
+        maskSource = new Location(col, row);
+    }
+    public void setMaskGoal(Location loc) {
+        maskGoal = loc;
+    }
+    public void setMaskGoal(char col, int row) {
+        maskGoal = new Location(col, row);
+    }
+    public void clearMask() {
+        maskSource = null;
+        maskGoal = null;
     }
 
     public King getKing(boolean isBlack) {

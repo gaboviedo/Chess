@@ -13,6 +13,7 @@ public abstract class Piece {
     protected Location loc;
     protected boolean neverMoved = true;
     protected ChessBoard board; //reference to the board
+    protected Set<Location> legalMoveList;  //current legal moves, valid untill next move is made; should be updated before each own turn
 
     //constructor
     protected Piece() {
@@ -35,6 +36,7 @@ public abstract class Piece {
     //TODO: boolean borderCheck(Location loc){}
 
     //getters & setters
+    public Set<Location> getLegalMoveList(return legalMovelist);
     public boolean isBlack() {return isBlack;}
     public PieceType getType() {return pieceType;}
     public Location getLoc() {
@@ -45,6 +47,20 @@ public abstract class Piece {
     }
     public void setMoved() {
         neverMoved = false;
+    }
+
+    //methods
+    public void updateLegalMoveList() {
+        legalMoveList.clear();  //is this line necessary?
+        legalMoveList = listNominalMoves();
+        //test if King is under attack by masking the board
+        King selfKing = board.getKing(this.isBlack);
+        board.setMaskSource(this.loc);  //mask Source
+        legalMoveList.removeIf((Location m) -> {    //remove moves that results in ally King checked/attacked.
+            board.setMastGoal(m);   //mask Goal as each candidate m
+            return selfKing.isChecked();
+        });
+        board.clearMask();  //remember to clear the mask
     }
 
     //helper methods
