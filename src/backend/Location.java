@@ -21,14 +21,14 @@ public class Location {
     }
 
     public void setCol(char col) {
-        if(col < 'a' || col > 'h') {
+        if (col < 'a' || col > 'h') {
             //TODO: throw exception illegal arg
         }
         this.col = col;
     }
 
     public void setRow(int row) {
-        if(row < 1 || row > 8) {
+        if (row < 1 || row > 8) {
             //TODO: throw illegal arg
         }
         this.row = row;

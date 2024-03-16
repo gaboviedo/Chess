@@ -43,23 +43,18 @@ public class King extends Piece{
         posschanges.add(1,0);
         posschanges.add(-1,0);
         posschanges.add(0,-1);
-        for(int i=0;i<posschanges.size();i++) {
+        for (int i=0;i<posschanges.size();i++) {
             Location candidate = new Location((char)loc.getCol()+posschanges[i].getCol,loc.getRow()+posschanges[i].getRow());
-            if(board.contains(candidate)){
-                if(board.isEmptyAt(candidate)){
+            if (board.contains(candidate)){
+                if (board.isEmptyAt(candidate)){
                     set.add(candidate);
-                }
-                else{
-                    if(board.at(col, row).isBlack != this.isBlack){
+                } else {
+                    if (board.at(col, row).isBlack != this.isBlack){
                         set.add(candidate);
                     }
                 }
-
+            }
+            return set;
         }
-
-
-        return set;
     }
-}
-
 }

@@ -4,7 +4,7 @@ package src.chess_game_backend;
 import java.util.Set;
 import static java.lang.Math.abs;
 
-public class Knight extends Piece{
+public class Knight extends Piece {
     //members
 
     //constructors

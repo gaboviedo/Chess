@@ -27,6 +27,7 @@ public class Queen extends Piece{
         }
         return false;
     }
+
     @Override
     Set<Location> listPossibleMoves() {
         Set<Location> set = new HashSet<>();

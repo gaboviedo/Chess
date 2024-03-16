@@ -27,10 +27,14 @@ public abstract class Piece {
         this.isBlack = isBlack;
         this.loc = loc;
     }
-    //methods
+
+    //abstract methods
     public abstract boolean isLegalMove(Location loc);
     public abstract Set<Location> listPossibleMoves();
-    //boolean borderCheck(Location loc){}
+
+    //TODO: boolean borderCheck(Location loc){}
+
+    //getters & setters
     public boolean isBlack() {return isBlack;}
     public PieceType getType() {return pieceType;}
 

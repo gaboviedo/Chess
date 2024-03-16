@@ -20,5 +20,6 @@ public class ChessGame {
     void removePiece(Location loc) {
         UUID uuid-toBeRemoved;
     }
+
     void setPiece(PieceType type, Location loc, boolean isBlack) {}
 }
