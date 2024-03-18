@@ -58,11 +58,11 @@ public class King extends Piece{
     }
 
     public boolean isChecked() {
-        Set<Location> opponentGrossMoves = new HashSet<>;   //contains all locations under enemy attack
         for (Piece opponentPiece : board.getTeam(!this.isBlack))  //forEach piece in opponent team
         {
-            opponentGrossMoves.addAll(opponentPiece.listNominalMoves());    //add current Piece's nominal moves to the Gross
+            //if anyone's AttackRange contains King's loc, then King is checked
+            if (opponentPiece.listAttackRange().contains(this.loc)) {return true;}
         }
-        return opponentGrossMoves.contains(this.loc);   //return true if contains self Location
+        return false;
     }
 }
