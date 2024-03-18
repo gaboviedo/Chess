@@ -41,14 +41,14 @@ public abstract class Piece {
     //getters & setters
     public Set<Location> getLegalMoveList() {
         return legalMovelist;}
-    public boolean isBlack() {return isBlack;}
-    public PieceType getType() {return pieceType;}
+    public boolean isBlack() {
+        return isBlack;}
+    public PieceType getType() {
+        return pieceType;}
     public Location getLoc() {
-        return loc;
-    }
+        return loc;}
     public boolean isNeverMoved() {
-        return neverMoved;
-    }
+        return neverMoved;}
     public void setMoved() {
         neverMoved = false;
     }
