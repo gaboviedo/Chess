@@ -30,7 +30,6 @@ public abstract class Piece {
     }
 
     //abstract methods
-    public abstract boolean isLegalMove(Location loc);
     //all locations that seems reachable, regardless of whether it will results in our King checked
     public abstract Set<Location> listNominalMoves();
     //AttackRange is not the exactly same as NominalMoves for: King Casting and Pawn
@@ -65,6 +64,9 @@ public abstract class Piece {
             return selfKing.isChecked();
         });
         board.clearMask();  //remember to clear the mask
+    }
+    public boolean isLegalMove(Location loc) {
+        return legalMoveList.contains(loc);
     }
 
     //helper methods

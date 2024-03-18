@@ -2,7 +2,6 @@
 package src.chess_game_backend;
 
 import java.util.Set;
-import static java.lang.Math.abs;
 
 public class Knight extends Piece {
     //members
@@ -13,17 +12,6 @@ public class Knight extends Piece {
     }
 
     //methods
-    @Override
-    boolean isLegalMove(Location targetLoc){
-        if(1==abs(targetLoc.getCol()- loc.getCol())&&abs(targetLoc.getRow()-loc.getRow())==2){//tall L
-            return true;
-        }
-        else if(2==abs(targetLoc.getCol()- loc.getCol())&&abs(targetLoc.getRow()-loc.getRow())==1){//short L
-            return true;
-        }
-        return false;
-    }
-
     @Override
     Set<Location> listNominalMoves() {
 

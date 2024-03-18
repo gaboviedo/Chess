@@ -14,20 +14,6 @@ public class Queen extends Piece{
 
     //methods
     @Override
-    boolean isLegalMove(Location targetLoc){
-        if((targetLoc.getCol()-loc.getCol())==(targetLoc.getRow()- loc.getRow())){//defines diagonal movement
-            return true;
-        }
-        else if(targetLoc.getCol()== loc.getCol()&&targetLoc.getRow()!=loc.getRow()){//defines vertical movement
-            return true;
-        }
-        else if(targetLoc.getCol()!= loc.getCol()&&targetLoc.getRow()==loc.getRow()){//defines hori movement
-            return true;
-        }
-        return false;
-    }
-
-    @Override
     Set<Location> listNominalMoves() {
         Set<Location> set = new HashSet<>();
         Location candidate;

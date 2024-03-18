@@ -13,14 +13,6 @@ public class Bishop extends Piece{
 
     //methods
     @Override
-    boolean isLegalMove(Location targetLoc){
-        if((targetLoc.getCol()-loc.getCol())==(targetLoc.getRow()- loc.getRow())){//defines diagonal movement
-            return true;
-        }
-        return false;
-    }
-
-    @Override
     Set<Location> listNominalMoves() {
         Set<Location> set = new HashSet<>();
         Location candidate;
