@@ -39,7 +39,8 @@ public abstract class Piece {
     //TODO: boolean borderCheck(Location loc){}
 
     //getters & setters
-    public Set<Location> getLegalMoveList(return legalMovelist);
+    public Set<Location> getLegalMoveList() {
+        return legalMovelist;}
     public boolean isBlack() {return isBlack;}
     public PieceType getType() {return pieceType;}
     public Location getLoc() {
