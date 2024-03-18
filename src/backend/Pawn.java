@@ -29,7 +29,7 @@ public class Pawn extends Piece{
         candidate = new Location(col, row + (isBlack() ? -1 : 1));
         if(board.isEmptyAt(candidate)) {
             set.add(candidate);
-            if(neverMoved) {
+            if(neverMoved) {    //if never moved, can move two squares
                 candidate = new Location(col, row + (isBlack() ? -2 : 2));
                 if(board.isEmptyAt(candidate)) {
                     set.add(candidate);
