@@ -9,9 +9,8 @@ public class Rook extends Piece {
     //members
 
     //constructors
-    Rook(Location loc,boolean isBlack ){
-        super(PieceType.Pawn, isBlack);
-        this.loc = loc;
+    Rook(boolean isBlack, Location loc) {
+        super(PieceType.Rook, isBlack, loc);
     }
 
     //methods

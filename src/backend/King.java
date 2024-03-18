@@ -8,9 +8,8 @@ public class King extends Piece{
     //members
 
     //consturctors
-    King(Location loc,boolean isBlack ){
-        super(PieceType.Pawn, isBlack);
-        this.loc = loc;
+    King(boolean isBlack, Location loc) {
+        super(PieceType.King, isBlack, loc);
     }
 
     //methods

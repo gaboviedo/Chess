@@ -8,9 +8,8 @@ public class Queen extends Piece{
     //members
 
     //constructor
-    Queen(Location loc,boolean isBlack ){
-        super(PieceType.Pawn, isBlack);
-        this.loc = loc;
+    Queen(boolean isBlack, Location loc) {
+        super(PieceType.Queen, isBlack, loc);
     }
 
     //methods

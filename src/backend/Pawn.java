@@ -10,9 +10,8 @@ public class Pawn extends Piece{
     protected enPassantEnabled = false; //can be killed by En Passant
 
     //constructor
-    Pawn(Location loc, boolean isBlack) {
-        super(PieceType.Pawn, isBlack);
-        this.loc = loc;
+    Pawn(boolean isBlack, Location loc) {
+        super(PieceType.Pawn, isBlack, loc);
     }
 
     //methods override

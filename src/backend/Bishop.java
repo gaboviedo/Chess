@@ -7,9 +7,8 @@ public class Bishop extends Piece{
     //members
 
     //constructors
-    Bishop(Location loc,boolean isBlack ){
-        super(PieceType.Pawn, isBlack);
-        this.loc = loc;
+    Bishop(boolean isBlack, Location loc) {
+        super(PieceType.Bishop, isBlack, loc);
     }
 
     //methods

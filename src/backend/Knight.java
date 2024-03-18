@@ -8,9 +8,8 @@ public class Knight extends Piece {
     //members
 
     //constructors
-    Knight(Location loc,boolean isBlack ){
-        super(PieceType.Pawn, isBlack);
-        this.loc = loc;
+    Knight(boolean isBlack, Location loc) {
+        super(PieceType.Knight, isBlack, loc);
     }
 
     //methods
